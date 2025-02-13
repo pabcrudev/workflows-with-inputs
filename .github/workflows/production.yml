@@ -13,3 +13,8 @@ jobs:
     steps:
     - name: Send greeting
       run: echo production
+  no-env:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Send greeting
+      run: echo no env
