@@ -1,4 +1,4 @@
-name: Mixed inputs
+name: Production inputs
 
 on:
   workflow_dispatch:
