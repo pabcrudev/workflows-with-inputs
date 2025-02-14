@@ -1,10 +1,10 @@
 name: Production inputs
 
 on:
-  workflow_dispatch:
-    inputs:
-      environment:
-        type: environment
+  workflow_run:
+    workflows: ["Mixed inputs"]
+    types:
+      - completed
 
 jobs:
   production:
@@ -13,8 +13,3 @@ jobs:
     steps:
     - name: Send greeting
       run: echo production
-  no-env:
-    runs-on: ubuntu-latest
-    steps:
-    - name: Send greeting
-      run: echo no env
