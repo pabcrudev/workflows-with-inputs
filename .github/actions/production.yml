@@ -1,0 +1,23 @@
+name: "Production Action"
+description: "Composite action that receives parameters and displays a message"
+
+inputs:
+  environment:
+    description: "Environment name"
+    required: true
+  message:
+    description: "Custom message to display"
+    required: true
+  version:
+    description: "Version number"
+    required: true
+
+runs:
+  using: "composite"
+  steps:
+    - name: Display received parameters
+      shell: bash
+      run: |
+        echo "Environment: ${{ inputs.environment }}"
+        echo "Message: ${{ inputs.message }}"
+        echo "Version: ${{ inputs.version }}"
