@@ -1,16 +1,7 @@
-enum UserRole {
-  ADMIN = 'admin',
-  USER = 'user',
-}
+import { UserEntity } from "./entities/user.entity";
+import { UserRole } from "./types/user";
+import { displayUser } from "./utils/display-user";
 
-interface User {
-  name: string;
-  role: UserRole;
-}
+const theUser = new UserEntity("Pablo", UserRole.ADMIN);
 
-const user: User = {
-  name: 'John Doe',
-  role: UserRole.ADMIN,
-};
-
-console.log(user);
+displayUser(theUser);
