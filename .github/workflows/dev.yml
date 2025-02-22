@@ -1,4 +1,4 @@
-name: Manual Node.js Workflow
+name: Manual Dev Command
 
 on:
   workflow_dispatch:
