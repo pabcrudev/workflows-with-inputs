@@ -1,0 +1,21 @@
+name: Manual Test Command
+
+on:
+  push:
+    paths:
+      - test/**
+      - .github/workflows/test.yml
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Install Dependencies
+        uses: ./.github/workflows/actions/install-deps
+
+      - name: Test Project
+        run: pnpm test
