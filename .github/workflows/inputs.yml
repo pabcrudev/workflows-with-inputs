@@ -25,13 +25,6 @@ jobs:
     - name: Send greeting
       run: echo "${{ github.event.inputs.message }} ${{ fromJSON('["", "🥳"]')[github.event.inputs.use-emoji == 'true'] }} ${{ github.event.inputs.name }}"
 
-  prod-comp-action:
-    if: github.event.inputs.environment == 'production'
-    runs-on: ubuntu-latest
-    steps:
-      - name: Production Composite Action
-        uses: ./.github/actions/production.yml
-
   prod-workflow:
     if: github.event.inputs.environment == 'production'
     uses: ./.github/workflows/production.yml
