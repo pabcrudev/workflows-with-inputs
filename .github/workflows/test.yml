@@ -3,6 +3,7 @@ name: Manual Test Command
 on:
   push:
     paths:
+      - src/**
       - test/**
       - .github/workflows/test.yml
 
