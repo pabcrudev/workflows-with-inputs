@@ -14,5 +14,5 @@ jobs:
       - name: Install Dependencies
         uses: ./.github/actions/install-deps
 
-      - name: Build Project
+      - name: Test Project in Development Mode
         run: pnpm dev
