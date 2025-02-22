@@ -8,11 +8,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout Repository
         uses: actions/checkout@v4
 
       - name: Install Dependencies
         uses: ./.github/actions/install-deps
 
-      - name: Run dev command
-        run: npm run dev
+      - name: Build Project
+        run: pnpm dev
